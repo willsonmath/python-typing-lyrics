@@ -13,8 +13,8 @@ def typing_effect(text, duration, delay):
         time.sleep(delay)
     else:
         speed = duration / len(text)
-        for i in range(1, len(text) + 1):
-            print(text[:i], end="\r", flush=True)
+        for letter in text:
+            print(letter, end="", flush=True)
             time.sleep(speed)
         print()
         time.sleep(delay)
